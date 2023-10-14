@@ -15,9 +15,12 @@ namespace geo_lib
 
 #define PI_GEO 3.1415926535897931
 
+double ALG0001(double _phi, double _e);
 double ALG0002(double _l_iso, double _e, double _tol);
-void ALG0004(double _n, double _e, double _c, double _lamc, double _Xs, double _Ys, double _X, double _Y, double _tol, double* _lambda, double* _phi);
+void ALG0003(double _lambda, double _phi, double _n, double _e, double _c, double _lamc, double _Xs, double _Ys, double* _X, double* _Y);
+void ALG0004(double _X, double _Y, double _n, double _e, double _c, double _lamc, double _Xs, double _Ys, double _tol, double* _lambda, double* _phi);
 void lambert_to_geo(double _X, double _Y, double* _longitude, double* _latitude, int lambert_type);
+void geo_to_lambert(double _longitude, double _latitude, double* _X, double* _Y, int lambert_type);
 
 }//namespace geo_lib
 #endif // CONV_GEO_H_INCLUDED
